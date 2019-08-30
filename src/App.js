@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import TopHeader from "./intro";
 import Header from "./header";
 import NasaImage from "./picture";
 import { MainDiv, HeaderDiv } from "./containers"
@@ -25,18 +26,16 @@ function App() {
 
   return (
     <div className="App">
-      <HeaderDiv>
-        <Header link="https://www.nasa.com" website="www.nasa.com" />
-      </HeaderDiv>
 
-      <div>
-        <h1>Nasa Photo of the Day</h1>
-        <p>Below is a picture and a description taken by NASA. Check back tomorrow for a new NASA picture!</p>
-      </div>
+      <TopHeader />
 
       <MainDiv>
         <NasaImage title={title} url={link} explanation={explanation} />
       </MainDiv>
+      
+      <HeaderDiv>
+        <Header link="https://www.nasa.gov/" website="www.nasa.com" />
+      </HeaderDiv>
     </div>
   );
 }

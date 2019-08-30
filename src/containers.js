@@ -5,8 +5,10 @@ export const HeaderDiv = styled.div`
 `
 
 export const MainDiv = styled.div`
-    margin: 50px auto;
-    width: 90%;
+    margin: 30px auto;
+    width: 80%;
     height: 725px;
-    border: 5px inset gray;
+    border: 3px solid gray;
+    border-radius: 20px;
+    box-shadow: 0 0 15px black;
 `

@@ -8,7 +8,7 @@ function Header(props) {
         width: 50%;
         display: flex;
         justify-content: space-around;
-        padding-top: 10px;
+        padding: 5px 0 20px 0;
     `
 
     const Anchors = styled.a`
@@ -18,17 +18,17 @@ function Header(props) {
         border: 2px solid black;
         border-radius: 10px;
         text-decoration: none;
-        font-size: 25px;
-        
-        & : hover{
+        font-size: 18px;
+
+        &:hover {
             background-color: black;
         }
     `
 
     return (
         <Topnav>
-            <Anchors href="#">Home</Anchors>
             <Anchors href={props.link} target="_blank">{props.website}</Anchors>
+            <Anchors href="https://www.nasa.gov/multimedia/imagegallery/iotd.html" target="_blank">More Pictures</Anchors>
         </Topnav>
     );
 }

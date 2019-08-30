@@ -12,13 +12,13 @@ function NasaImage(props) {
         margin: 15px auto;
         width: 60%;
         height: 400px;
-        object-fit: contain;
+        object-fit: cover;
+        box-shadow: 3px 3px 6px black;
     `
 
     const Paragraph = styled.p`
         margin: 25px auto;
         width: 80%;
-        height: 175px;
         font-size: 12px;
     `
 
