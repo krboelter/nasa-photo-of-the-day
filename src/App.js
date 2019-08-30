@@ -5,15 +5,16 @@ import TopHeader from "./intro";
 import Header from "./header";
 import NasaImage from "./picture";
 import { MainDiv, HeaderDiv } from "./containers"
+import { thisExpression } from "@babel/types";
 
 function App() {
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
   const [explanation, setExplanation] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState('2019-08-26');
 
   // useEffect(() => {
-  //   axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+  //   axios.get(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date-${date}`)
   //     .then(response => {
   //       console.log(response)
   //       setTitle(response.data.title)
@@ -27,7 +28,10 @@ function App() {
   return (
     <div className="App">
 
-      <TopHeader />
+      <TopHeader/>
+      <form>
+          <input onChange={(event) => setDate(event.target.value)} type='date'></input>
+      </form>
 
       <MainDiv>
         <NasaImage title={title} url={link} explanation={explanation} />

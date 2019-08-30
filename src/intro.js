@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function TopHeader(props) {
+function TopHeader() {
 
     const Header = styled.h1`
         margin: 0 auto 10px auto;
@@ -23,9 +23,6 @@ function TopHeader(props) {
             <Header color="red">Nasa Photo of the Day</Header>
             <Paragraph color="green">Below is a picture and a description taken by NASA. Check back tomorrow for a new NASA picture!</Paragraph>
             <Paragraph color="green">Select a date to change the image.</Paragraph>
-            <form>
-                <input type="date"></input>
-            </form>
         </div>
     )
 }
